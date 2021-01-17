@@ -51,16 +51,16 @@ const Formulario = ({crearCita}) => {
     return (
         <Fragment>
             <h2>Crear Cita</h2>
-            { error ? <p className="alerta-error">Debe completar todos los campos</p>
+            { error ? <p className="alert alert-danger">Debe completar todos los campos</p>
             : null}
             <form
                 onSubmit={submitCita}
             >
-                <label>Nombre Mascota</label>
+                <label class="form-label">Nombre Mascota</label>
                 <input
                     type="text"
                     name="mascota"
-                    className="u-full-width"
+                    className="form-control mb-2"
                     placeholder="Nombre Mascota"
                     onChange={actualizarState}
                     value={mascota}       
@@ -69,7 +69,7 @@ const Formulario = ({crearCita}) => {
                 <input
                     type="text"
                     name="propietario"
-                    className="u-full-width"
+                    className="form-control mb-2"
                     placeholder="Nombre dueño de mascota"
                     onChange={actualizarState}
                     value={propietario}         
@@ -78,7 +78,7 @@ const Formulario = ({crearCita}) => {
                 <input
                     type="date"
                     name="fecha"
-                    className="u-full-width"
+                    className="form-control mb-2"
                     onChange={actualizarState}
                     value={fecha}         
                 />
@@ -86,13 +86,13 @@ const Formulario = ({crearCita}) => {
                 <input
                     type="time"
                     name="hora"
-                    className="u-full-width"
+                    className="form-control mb-2"
                     onChange={actualizarState}
                     value={hora}          
                 />
                 <label>Síntomas</label>
                 <textarea
-                    className="u-full-width"
+                    className="form-control mb-2"
                     name="sintomas"
                     onChange={actualizarState}
                     value={sintomas}
@@ -100,7 +100,7 @@ const Formulario = ({crearCita}) => {
 
                 <button
                     type="submit"
-                    className="u-full-width button-primary"
+                    className="btn btn-primary btn-block"
                 >Agregar Cita</button>
             </form>
         </Fragment>

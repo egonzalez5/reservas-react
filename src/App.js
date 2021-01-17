@@ -41,16 +41,17 @@ function App() {
 
   return (
     <Fragment>
+      <div className="container mt-3">
       <h1>Administrador de mascotas</h1>
 
-      <div className="container">
         <div className="row">
-          <div className="one-half column">
+          <div className="col-md-6 mt-4">
             <Formulario
               crearCita={crearCita}
             />
           </div>
-          <div className="one-half column">
+          
+          <div className="col-md-6 mt-4">
             <h2>{titulo}</h2>
             {citas.map(cita => (
               <Cita
