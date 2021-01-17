@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import Formulario from './components/Formulario.jsx';
-import Cita from './components/Cita';
+import Cita from './components/Cita.jsx';
 
 
 function App() {
